@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/play.css" />
+		<script src="js/3.3.1jquery.js"></script>
+		<script src="//at.alicdn.com/t/font_681964_vq3zdf1ovszto6r.js"></script>
+		<script>
+			/*获取页面宽度*/
+			var pageWidth = window.innerWidth
+			/*将获取的页面宽度写进 html的font-size*/
+			document.write('<style>html{font-size:' + pageWidth / 10 + 'px;}</style>')
+		</script>
+		<title>歌曲播放</title>
+	</head>
+
+	<body>
+		<div class="page"  id="page">
+				<div class="disc-contaiter" id="contaiter">
+					<div class="pointer">
+						<img src="http://s3.music.126.net/m/s/img/needle-ip6.png?be4ebbeb6befadfcae75ce174e7db862" />
+					</div>
+					<div class="disc">
+						<img class="ring" src="http://s3.music.126.net/m/s/img/disc-ip6.png?69796123ad7cfe95781ea38aac8f2d48" />
+						<img class="light" src="http://s3.music.126.net/m/s/img/disc_light-ip6.png?996fc8a2bc62e1ab3f51f135fc459577" />
+						<img id="coverimg" class="cover" src="" />
+					</div>
+			</div>
+			<div class="lyric" id="lyrics">
+				<div class="lines">
+					
+				</div>
+			</div>
+			<div class="p-m-wrapper">
+				<div class="song-description" id="description">
+					<span id="">
+					<svg class="icon" aria-hidden="true">
+    						<use xlink:href="#icon-aixinxianxing"></use>
+					</svg>
+				</span>
+				<span >
+					<svg class="icon" aria-hidden="true">
+    						<use xlink:href="#icon-xiazaigray"></use>
+					</svg>
+				</span>
+				<span >
+					<svg class="icon" aria-hidden="true">
+    						<use xlink:href="#icon-pinglun"></use>
+					</svg>
+				</span>
+					<span id="">
+					<svg class="icon" aria-hidden="true">
+    						<use xlink:href="#icon-icon"></use>
+					</svg>
+				</span>
+				</div>
+				<div class="progressbar">
+					<span id="">
+						00:27
+					</span>
+					<div class="">
+
+					</div>
+					<span id="">
+						05:27
+					</span>
+				</div>
+				<div class="musiccontrol">
+					<span id="back">
+						<svg class="icon" aria-hidden="true">
+	    						<use xlink:href="#icon-fanhui"></use>
+						</svg>
+					</span>
+					<span id="lastsong">
+						<svg class="icon" aria-hidden="true">
+	    						<use xlink:href="#icon-shangyishouxianxing"></use>
+						</svg>
+					</span>
+					<span class="btn-play">
+						<svg class="icon"  aria-hidden="true">
+							<use xlink:href="#icon-paly"></use>
+						</svg>
+						
+					</span>
+					<span class="btn-stop">
+						<svg class="icon"  aria-hidden="true">
+							<use xlink:href="#icon-zanting2"></use>
+						</svg>
+					</span>
+				
+					<span id="nextsong">
+						<svg class="icon" aria-hidden="true">
+	    						<use xlink:href="#icon-xiayishouxianxing"></use>
+						</svg>
+					</span>
+					<span id="">
+						<svg class="icon" aria-hidden="true">
+	    						<use xlink:href="#icon-caidan"></use>
+						</svg>
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/play.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

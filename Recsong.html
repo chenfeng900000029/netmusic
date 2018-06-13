@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/recsong.css"/>
+		<script type="text/javascript" src="js/3.3.1jquery.js" ></script>
+		<script src="//at.alicdn.com/t/font_681964_uveq3eiloparwwmi.js"></script>
+		<script>
+			/*获取页面宽度*/
+			var pageWidth = window.innerWidth
+			/*将获取的页面宽度写进 html的font-size*/
+			document.write('<style>html{font-size:' + pageWidth / 10 + 'px;}</style>')
+		</script>
+		<title>推荐歌曲</title>
+	</head>
+	<body>
+		<div class="rec-song-wrapper">
+			<a href="index.html">
+				<div class="rec-art-banner">
+					<!--日历 图标/文字  用了图片暂时注释	-->
+					<!--<span id="">  
+							<svg class="icon" aria-hidden="true">
+		    						<use xlink:href="#icon-iconset0208"></use>
+							</svg>
+						<p>根据您的音乐口味生成，每天6：00更新</p>
+					</span>-->
+				</div>
+			</a>
+			<div class="rec-song-list" >
+				<div class="">
+					<span id="">
+						<svg class="icon"  aria-hidden="true">
+							<use xlink:href="#icon-bofang"></use>
+						</svg>
+						播放全部
+					</span>
+					<span id="">
+						<svg class="icon"  aria-hidden="true">
+							<use xlink:href="#icon-fenlei"></use>
+						</svg>
+						多选
+					</span>	
+				</div>
+				<div class="rec-list-single" id="lastmusic">
+					
+					
+					
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" src="js/recsong.js" ></script>	
+	</body>
+</html>

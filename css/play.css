@@ -1,0 +1,175 @@
+*{ margin: 0;
+padding: 0;
+box-sizing: border-box;}
+*::before, *::after{ box-sizing: border-box;}
+*{transition: all .3s;}
+ -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a{
+	outline:none;
+   -moz-outline-style:none;
+ }
+ .icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+
+a{ text-decoration: none;
+outline: none;}
+@keyframes cirle{
+	from{transform: rotate(0deg);}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+.page{display: flex;
+	flex-direction: column;
+	background:transparent url(http://p9sfbm7t8.bkt.clouddn.com/tongyong.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	height: 100vh;
+	}
+
+
+.disc-song-wrapper{ display: flex;
+flex-direction: column;
+height: 79vh;
+}
+.pointer{position: relative;
+z-index: 1;
+	
+}
+
+.pointer img{  width:96px;
+				height: 137px;
+				position: absolute;
+				left: 4.6rem;
+		}
+.disc-contaiter .disc{
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	margin-top:10vh;
+	flex: 1;
+	
+}		
+.disc .ring,.disc .cover{
+	width: 8.2rem;
+	position: absolute;
+}	
+
+.disc .light{
+	
+	width: 8.2rem;
+}	
+.disc .cover{width: 5.2rem;
+border-radius: 50%;
+
+}
+.disc.playing .cover,.disc.playing .light{ animation: cirle 20s linear infinite;}
+
+.song-description{
+display: flex;
+flex-direction: row;
+justify-content:space-around;
+width: 8rem;
+margin:  0 auto;
+color: #fff;
+margin-bottom: 2.5vh;
+}
+.song-description span{display: block;
+font-size: 28px;
+ }
+.song-description span:nth-child(2){display: block;
+font-size: 24px;
+ }
+.p-m-wrapper{ display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 21vh;
+  flex: 1;}
+ .progressbar{
+ display: flex;
+flex-direction: row;
+justify-content: space-around;
+ width: 9rem;
+ margin:0  auto;
+height: 4vh;
+ font-size: 12px;
+ color: #FFFFFF;
+ margin-bottom: 3vh;
+ }
+ .progressbar div{ width: 7rem;
+ background:#D3D3D3;
+ height: 2px;
+ border-radius: 10px;
+ margin-top: 1vh;
+}
+ .progressbar div:before{border: 7px solid #FFF;
+ display: block; 
+ width: 4px;
+ height:4px;
+ border-radius: 10px;
+ content: '';
+ opacity: 10;
+ margin-top: -6px;
+ box-shadow: 0 0 5px 0px rgba(0,0,0,0.75);}
+  .progressbar div:after{border: 3px solid #EB001D;
+ display: block; 
+ width: 5px;
+ height: 5px;
+ border-radius: 10px;
+ content: '';
+ opacity: 10;
+ margin-top: -10px;
+ margin-left:4px ;}
+ 
+ .progressbar span:nth-child(3){
+ color: #FFFFFF;
+ opacity: .4;
+ }
+ .musiccontrol{ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ width: 9.5rem;
+ margin: 0 auto;
+ font-size:0.8rem;
+ margin-bottom: 2vh;
+ }
+ 
+.btn-play{
+	font-size: 1.6rem;
+	margin-top: -2.5vh;
+	
+}	
+.btn-stop{
+	font-size: 1.6rem;
+	margin-top: -2.5vh;
+	display: none;
+}	
+  
+.musiccontrol.playing .btn-play{display: none;}
+.musiccontrol.playing .btn-stop{display: block;}
+  .lyric{
+  display: none;
+  overflow: hidden;
+  height: 72vh;
+  padding-top: 8vh;
+}
+  
+  .lyric .lines p{ font-size: 16px;
+  text-align: center;
+  color: #dedede;
+  line-height: 28px;
+  color: #999;}
+  .lyric .lines p.active{color:#fff;}
+  .lyric .lines{ 
+  	margin-top:66%;
+}
+  
+
+  

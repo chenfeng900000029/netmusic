@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>NetEasemusic</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/3.3.1jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="//at.alicdn.com/t/font_681964_vq3zdf1ovszto6r.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.7.2/dist/av-min.js"></script>
+		<script>
+			/*获取页面宽度*/
+			var pageWidth=window.innerWidth
+			/*将获取的页面宽度写进 html的font-size*/
+			document.write('<style>html{font-size:'+ pageWidth/10 +'px;}</style>')
+		</script>
+	</head>
+	<body>
+		<nav class="siteNav">
+			<ol class="tab-items">
+				<li class="active"><span>个性推荐</span></li>
+				<li ><span>视频推荐</span></li>
+				<li ><span>快速搜索</span></li>
+			</ol>
+		</nav>
+		<ol class="tabContent">
+			<li class="active" >
+				<div class="art-banner">
+				</div>
+				<div class="navBar">
+					<ul>
+						<a href="Recsong.html">
+						<li>
+							<span id="">
+								<svg class="icon" aria-hidden="true">
+			    						<use xlink:href="#icon-radio"></use>
+								</svg>
+							</span>
+							<span id="">私人FM</span>
+						</li>
+						</a>
+					
+						<a href="Recsong.html">
+							<li>
+								<span id="">
+									<svg class="icon" aria-hidden="true">
+				    						<use xlink:href="#icon-iconset0208"></use>
+									</svg>
+								</span>
+								<span>每日推荐</span>
+						    </li>
+					 	 </a>		
+					 	 <a href="">
+							<li>
+								<span id="">
+									<svg class="icon" aria-hidden="true">
+				    						<use xlink:href="#icon-gedanshouluOFF"></use>
+									</svg>
+								</span>
+								<span>歌单</span>
+							</li>
+						</a>
+						<a href="">
+							<li>
+								<span id="">
+									<svg class="icon" aria-hidden="true">
+				    						<use xlink:href="#icon-paihang"></use>
+									</svg>
+								</span>
+								<span>排行榜</span>
+							</li>
+						</a>	
+					</ul>
+				</div>
+				<div class="recomsong">
+					<span id="">
+						<h3>推荐歌单</h3>
+						<svg class="icon" aria-hidden="true">
+			    				<use xlink:href="#icon-icon-test"></use>
+						</svg>
+					</span>
+					
+					<ul>
+						<li>
+							<img src="https://p1.music.126.net/5V_xuMoGQvSSLXM87kNAmQ==/18558656767426549.jpg?param=140y140"/>
+							<p>年(dan)轻(shen)人(gou)的听歌日常</p>
+						</li>
+						<li>
+							<img src="img/109951163280187392.jpeg"/>
+							<p>夏天快要过去，牵你手买冰淇淋</p>
+						</li>
+						<li>
+							<img src="img/109951163304640811.jpeg"/>
+							<p>前奏直接秒杀的纯音乐</p>
+						</li>
+						<li>
+							<img src="img/109951163315409130.jpeg">
+							<p>我会不会又把这个周末睡过去了</p>
+						</li>
+						<li>
+							<img src="img/18635622580993683.jpeg"/>
+							<p>你是白天 我是夜晚</p>
+						</li>
+						<li>
+							<img src="img/7717472115651287.jpeg"/>
+							<p>「BGM」一定听过的神级背景配乐</p>
+						</li>
+					</ul>
+				</div>
+				<div class="recomsong">
+					<span id="">
+						<h3>最新音乐</h3>
+						<svg class="icon" aria-hidden="true">
+			    				<use xlink:href="#icon-icon-test"></use>
+						</svg>
+					</span>
+					
+					<ul>
+						<li>
+							<img src="img/44.jpg"/>
+							<p>年(dan)轻(shen)人(gou)的听歌日常</p>
+						</li>
+						<li>
+							<img src="img/66.jpg"/>
+							<p>夏天快要过去，牵你手买冰淇淋</p>
+						</li>
+						<li>
+							<img src="img/55.jpg"/>
+							<p>前奏直接秒杀的纯音乐</p>
+						</li>
+						<li>
+							<img src="img/222.jpeg">
+							<p>我会不会又把这个周末睡过去了</p>
+						</li>
+						<li>
+							<img src="img/33.jpg"/>
+							<p>你是白天 我是夜晚</p>
+						</li>
+						<li>
+							<img src="img/3285340745179482.jpeg"/>
+							<p>「BGM」一定听过的神级背景配乐</p>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				text2
+			</li>
+			<li>
+				<div class="inputWrap">
+					<input type="" name="" id="searchSong" value="" style="border:1px solid #333;" />
+				</div>
+				<div id="output" class="output">
+					<ul>
+						<li>
+							
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ol>
+	</body>
+<script type="text/javascript" src="js/index.js" ></script>
+<script type="text/javascript">
+	var APP_ID = 'M6xv4RypSwwMGKMB5VRMx9Nc-gzGzoHsz';
+	var APP_KEY = 'jK1qp68xY7XtT0MEdzpzza3b';
+
+	AV.init({
+  	appId: APP_ID,
+  	appKey: APP_KEY
+	});
+	
+	var SongObject = AV.Object.extend('Song');
+	var songObject = new SongObject();
+	songObject.save({
+  	name:'Planet',
+  	singer:'林宥嘉',
+  	url:'http://p9sfbm7t8.bkt.clouddn.com/cehgnquan.mp3',
+  	img:'http://p9sfbm7t8.bkt.clouddn.com/chengquan.jpg'
+	}).then(function(object) {
+    alert('ok');
+	})
+</script>
+</html>
