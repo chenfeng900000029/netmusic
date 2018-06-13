@@ -53,23 +53,29 @@ $('#lastsong').on('click',function(){
 	var currId=id
     query.find().then(function (results) { 	
     	let array=[]
-   
+   console.log(currId)
 	for (var i=0;i<results.length;i++) {
 			array.push(results[i].id)
 	}
 	let	index=array.indexOf(currId)
-		indexs=index+=1
-		let songs=results[indexs].attributes
-		id=array[indexs]
-		console.log(songs)
-    		console.log(results)
-	   	let {url,lyric,img} =songs
-	    	audio.src=url
-	    	 	
-	    	audio.play()	
+	if (index===0) {
+		index=array.length
+	}
+	console.log(index)
+	let indexs=Math.abs(index-=1)
+
+	let songs=results[indexs].attributes
+	id=array[indexs]	
+	console.log(indexs)
+    	console.log(results)
+	let {url,lyric,img} =songs
+	audio.src=url
+	audio.play()	
+	$('#lyrics>.lines').empty()   	
     	$('#coverimg').attr('src',img)
     	$('.musiccontrol').addClass('playing')
 	$('.disc').addClass('playing')
+	parseLyric(lyric)
     
     })
 })
@@ -86,20 +92,26 @@ $('#nextsong').on('click',function(){
 	}
 	let	index=array.indexOf(currId)
 		indexs=index+=1
+		if(indexs===array.length){
+			indexs=0
+		}
 		let songs=results[indexs].attributes
 		id=array[indexs]
+		console.log(currId)
 		console.log(songs)
+		console.log(array)
     		console.log(results)
 	   	let {url,lyric,img} =songs
 	   	console.log(songs)
 	   	console.log(url,id)
 	    	audio.src=url
 	    	audio.play()	
+	    	$('#lyrics>.lines').empty() 
 	    	$('#coverimg').attr('src',img)
 		$('.musiccontrol').removeClass('playing')
 		$('.disc').removeClass('playing')
-
-	
+		parseLyric(lyric)
+		
     })
 })
 	
@@ -118,18 +130,36 @@ setInterval(()=>{
 	break
 		}
 	}
-		if($whichLine){				
-		$whichLine.addClass('active').prev().removeClass('active')
-		let top=$whichLine.offset().top
-		let linesTop=$('.lines').offset().top
-		let delta=top-linesTop-$('.lines').height()/top
-		$('.lines').css('transform',`translateY(-${delta}px)`)
+	if($whichLine){				
+	$whichLine.addClass('active').prev().removeClass('active')
+	let top=$whichLine.offset().top
+	let linesTop=$('.lines').offset().top
+	let delta=top-linesTop-$('.lines').height()/top
+	$('.lines').css('transform',`translateY(-${delta}px)`)
 		}
 	},100)
 	function pad(number){
 		return number>=10 ? number + '':'0'+number 
 	}
   })
+
+function parseLyric(lyric){
+	let array=lyric.split('\n')
+	let regex = /^\[(.+)\](.*)$/
+	array = array.map(function(string, index) {
+		let matches = string.match(regex)
+		if(matches) {
+			return {time: matches[1],words: matches[2]}
+		}
+	})
+	let $lyric = $('.lyric')
+	array.map(function(object) {
+		if(!object){return}
+		let $p = $('<p/>')
+		$p.attr('data-time', object.time).text(object.words)
+		$p.appendTo($lyric.children('.lines'))
+		})
+	}
 	
 
 	
