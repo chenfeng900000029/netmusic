@@ -73,10 +73,10 @@ $('#lastsong').on('click',function(){
 	audio.play()	
 	$('#lyrics>.lines').empty()   	
     	$('#coverimg').attr('src',img)
-    	$('.musiccontrol').addClass('playing')
+  	$('.musiccontrol').addClass('playing')
 	$('.disc').addClass('playing')
+  
 	parseLyric(lyric)
-    
     })
 })
 $('#nextsong').on('click',function(){
@@ -108,8 +108,8 @@ $('#nextsong').on('click',function(){
 	    	audio.play()	
 	    	$('#lyrics>.lines').empty() 
 	    	$('#coverimg').attr('src',img)
-		$('.musiccontrol').removeClass('playing')
-		$('.disc').removeClass('playing')
+		$('.musiccontrol').addClass('playing')
+		$('.disc').addClass('playing')
 		parseLyric(lyric)
 		
     })

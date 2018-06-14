@@ -43,15 +43,22 @@ border: 0.04rem solid  #FFFFFF ;
 border-radius:1rem ;
 }
 
-.art-banner{ height: 22vh;
-width: 9.6rem;
+.art-banner{ height: 27vh;
+width: 9.4rem;
 margin: 0 auto;
-background:url(http://p1.music.126.net/EUeRspHRVvl1M9pYgQo7vQ==/109951163318752048.jpg);
 background-size:cover;
-border-radius:.2rem ;
 margin-top: -15.5vh;
 position: relative;
+border-radius:.2rem ;
+overflow: hidden;
  }
+.swiper-wrapper {
+	height: 22vh;
+	width: 9.6rem;
+	border-radius:.2rem ;
+}
+.swiper-slide img{ width: 100%;
+border-radius: 8px;}
 .navBar>ul{ display: flex;
 flex-direction: row;
 justify-content:space-around;
@@ -79,7 +86,6 @@ margin-top: .5rem
  .navBar > ul > a > li> span:nth-child(2){
  	margin-top: 0.1rem;
  }
-.recomsong{}
 .recomsong span{display: flex;
 flex-direction: row;
 justify-content: flex-start; 
@@ -103,32 +109,104 @@ font-size: 0.36rem;
 width: 9.7rem;
 margin: 0 auto;
 }
-.recomsong > ul > li{ width: calc(33.333333% - 0.05rem);
+.recomsong > ul > a{ width: calc(33.333333% - 0.05rem);
 } 
-.recomsong > ul > li > img{width: 100%;
+.recomsong > ul > a > li > img{width: 100%;
 border-radius:4px ;}
-.recomsong > ul > li > p{ padding-left: 6px;
+.recomsong  > ul > a > li > p{ padding-left: 6px;
 margin-bottom: 0.34rem;
 color: #202020;} 
 
-/*搜索*/
-.inputWrap{ width: 9rem;
-	margin: 0 auto;
-	margin-top: -16vh;
-}
-.inputWrap input{ width: 9rem;
-	height: 40px;
-	border-radius: 25px;
-	opacity: 1;
-	background: #FFFFFF;
-	outline-style: none;
-	font-size: 18px;
-	padding-left:10px ;
+/*video*/
+.redio-banner{
+	height: 27vh;
+width: 9.6rem;
+margin: 0 auto;
+background:url(http://paabzcrgt.bkt.clouddn.com/banner3.jpg);
+background-size:cover;
+border-radius:.2rem ;
+margin-top: -15.5vh;
+position: relative;
+overflow: hidden;
 }
 
-.output{ margin-top:9vh;
-	
-	}
-.output>ul>li{ font-size: 16px;
-color: #333333;
-padding: 10px 0 10px 10px;}	
+.redio-navBar>ul{ display: flex;
+flex-direction: row;
+justify-content:space-around;
+padding-bottom: .5rem;
+border-bottom: 1px solid #DEDEDE;
+}
+.redio-navBar > ul > a > li{ 
+font-size: 0.35rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+.redio-navBar > ul > a > li> span>svg{font-size: 0.8rem;
+fill: #fff;}
+.redio-navBar > ul > a > li> span{ margin: 0 auto;
+}
+.redio-navBar > ul > a > li> span:nth-child(1){width: 1.4rem;
+height: 1.4rem;
+border-radius:1rem ;
+background: rgba(248,80,50,1);
+padding-top: 0.3rem;
+margin-top: .3rem
+ }
+.redio-navBar > ul > a > li> span:nth-child(2){
+ 	margin-top: 0.1rem;
+ }
+.redio-recomsong>span{display: flex;
+flex-direction: row;
+justify-content: flex-start; 
+padding: 2.2vh 0 2.2vh 2.2vh;}
+.redio-recomsong > span > svg{ font-size: .5rem;
+fill: #666;
+} 
+.redio-recomsong h3:nth-child(1){ font-size: 0.5rem;
+font-weight: normal;
+display: flex;
+line-height: 1;
+}
+.redio-recomsong>span>span{ flex: 1;
+text-align: right;
+font-size: 12px;
+margin-right: 10px;
+color: #999999;
+}
+
+.redio-yx-wrap> a{display: flex;
+flex-direction: row; 
+align-content: flex-start;
+
+}
+.redio-cover img{
+	width: 3rem;
+	height: 3rem;
+	background: #000000;
+}
+.redio-yxcontent{
+	width: 7rem;
+	height: 17vh;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 0.2rem;
+	justify-content: center;
+}
+.redio-yxcontent span:nth-child(1){
+	font-size: 18px;
+	line-height: 24px;
+}
+.redio-yxcontent span:nth-child(2){
+	font-size: 14px;
+	line-height: 24px;
+	color: #999999;
+}
+.redio-yxcontent span:nth-child(3){
+	font-size: 14px;
+	line-height: 24px;
+	color: #999999;
+}
+

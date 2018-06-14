@@ -6,8 +6,9 @@
 		<title>NetEasemusic</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 		<script src="js/3.3.1jquery.js" type="text/javascript" charset="utf-8"></script>
-		<script src="//at.alicdn.com/t/font_681964_vq3zdf1ovszto6r.js"></script>
+		<script src="//at.alicdn.com/t/font_681964_whr2a4cmtxn.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.7.2/dist/av-min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
 		<script>
 			/*获取页面宽度*/
 			var pageWidth=window.innerWidth
@@ -19,14 +20,22 @@
 		<nav class="siteNav">
 			<ol class="tab-items">
 				<li class="active"><span>个性推荐</span></li>
-				<li ><span>视频推荐</span></li>
-				<li ><span>快速搜索</span></li>
+				<li ><span>主播电台</span></li>
 			</ol>
 		</nav>
 		<ol class="tabContent">
 			<li class="active" >
-				<div class="art-banner">
-				</div>
+			<div class="art-banner">
+				<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					        <div class="swiper-slide"><img src="http://paabzcrgt.bkt.clouddn.com/banner4.jpg"/></div>
+					        <div class="swiper-slide"><img src="http://paabzcrgt.bkt.clouddn.com/banner2.jpg"/></div>
+					        <div class="swiper-slide"><img src="http://paabzcrgt.bkt.clouddn.com/banner3.jpg"/></div>
+					   		
+					    </div>
+					    <div class="swiper-pagination"></div>
+					</div>
+				</div>	
 				<div class="navBar">
 					<ul>
 						<a href="Recsong.html">
@@ -50,7 +59,7 @@
 								<span>每日推荐</span>
 						    </li>
 					 	 </a>		
-					 	 <a href="">
+					 	 <a href="Recsong.html">
 							<li>
 								<span id="">
 									<svg class="icon" aria-hidden="true">
@@ -60,7 +69,7 @@
 								<span>歌单</span>
 							</li>
 						</a>
-						<a href="">
+						<a href="Recsong.html">
 							<li>
 								<span id="">
 									<svg class="icon" aria-hidden="true">
@@ -79,32 +88,8 @@
 			    				<use xlink:href="#icon-icon-test"></use>
 						</svg>
 					</span>
-					
-					<ul>
-						<li>
-							<img src="https://p1.music.126.net/5V_xuMoGQvSSLXM87kNAmQ==/18558656767426549.jpg?param=140y140"/>
-							<p>年(dan)轻(shen)人(gou)的听歌日常</p>
-						</li>
-						<li>
-							<img src="img/109951163280187392.jpeg"/>
-							<p>夏天快要过去，牵你手买冰淇淋</p>
-						</li>
-						<li>
-							<img src="img/109951163304640811.jpeg"/>
-							<p>前奏直接秒杀的纯音乐</p>
-						</li>
-						<li>
-							<img src="img/109951163315409130.jpeg">
-							<p>我会不会又把这个周末睡过去了</p>
-						</li>
-						<li>
-							<img src="img/18635622580993683.jpeg"/>
-							<p>你是白天 我是夜晚</p>
-						</li>
-						<li>
-							<img src="img/7717472115651287.jpeg"/>
-							<p>「BGM」一定听过的神级背景配乐</p>
-						</li>
+					<ul id="coverlist">
+											
 					</ul>
 				</div>
 				<div class="recomsong">
@@ -114,53 +99,125 @@
 			    				<use xlink:href="#icon-icon-test"></use>
 						</svg>
 					</span>
-					
-					<ul>
-						<li>
-							<img src="img/44.jpg"/>
-							<p>年(dan)轻(shen)人(gou)的听歌日常</p>
-						</li>
-						<li>
-							<img src="img/66.jpg"/>
-							<p>夏天快要过去，牵你手买冰淇淋</p>
-						</li>
-						<li>
-							<img src="img/55.jpg"/>
-							<p>前奏直接秒杀的纯音乐</p>
-						</li>
-						<li>
-							<img src="img/222.jpeg">
-							<p>我会不会又把这个周末睡过去了</p>
-						</li>
-						<li>
-							<img src="img/33.jpg"/>
-							<p>你是白天 我是夜晚</p>
-						</li>
-						<li>
-							<img src="img/3285340745179482.jpeg"/>
-							<p>「BGM」一定听过的神级背景配乐</p>
-						</li>
+					<ul id="coverlist">
+			
 					</ul>
 				</div>
 			</li>
 			<li>
-				text2
-			</li>
-			<li>
-				<div class="inputWrap">
-					<input type="" name="" id="searchSong" value="" style="border:1px solid #333;" />
+				<div class="video-wrap">
+					<ol class="tabContent">
+			<li class="active" >
+				<div class="redio-banner">
+					<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					        <div class="swiper-slide"><img src="http://paabzcrgt.bkt.clouddn.com/banner4.jpg"/></div>
+					        <div class="swiper-slide"><img src="http://paabzcrgt.bkt.clouddn.com/banner2.jpg"/></div>
+					        <div class="swiper-slide"><img src="http://paabzcrgt.bkt.clouddn.com/banner3.jpg"/></div>
+					    </div>
+					    <div class="swiper-pagination"></div>
+					</div>
 				</div>
-				<div id="output" class="output">
-					<ul>
-						<li>
-							
-						</li>
-					</ul>
+					<div class="redio-navBar">
+						<ul>
+							<a href="Recsong.html">
+							<li>
+								<span id="">
+									<svg class="icon" aria-hidden="true">
+				    						<use xlink:href="#icon-fenleiicon"></use>
+									</svg>
+								</span>
+								<span id="">电台分类</span>
+							</li>
+							</a>
+						
+							<a href="Recsong.html">
+								<li>
+									<span id="">
+										<svg class="icon" aria-hidden="true">
+					    						<use xlink:href="#icon-paixing"></use>
+										</svg>
+									</span>
+									<span>电台排行</span>
+							    </li>
+						 	 </a>		
+						 	 <a href="">
+								<li>
+									<span id="">
+										<svg class="icon" aria-hidden="true">
+					    						<use xlink:href="#icon-zhidexinlai"></use>
+										</svg>
+									</span>
+									<span>付费精品</span>
+								</li>
+							</a>
+							<a href="">
+								<li>
+									<span id="">
+										<svg class="icon" aria-hidden="true">
+					    						<use xlink:href="#icon-huiyuan"></use>
+										</svg>
+									</span>
+									<span>会员专区</span>
+								</li>
+							</a>	
+						</ul>
+					</div>
+					<div class="redio-recomsong">
+						<span id="">
+							<h3>今日优选</h3>
+							<svg class="icon" aria-hidden="true">
+				    				<use xlink:href="#icon-icon-test"></use>
+							</svg>
+							<span>
+								换一换
+							</span>
+						</span>
+						<ul class=" redio-yx-wrap">
+							<a href="">
+								<li class="redio-cover">
+									<img src="http://p9sfbm7t8.bkt.clouddn.com/give.jpg"/>
+								</li>
+								<li class="redio-yxcontent">
+									<span id="">小熊喝甜粥</span>
+									<span id="">节目:98</span>
+									<span id="">和你分享关于足球的那些事</span>
+								</li>
+							</a>
+						</ul>
+						<ul class=" redio-yx-wrap">
+							<a href="">
+								<li class="redio-cover">
+									<img src="http://p9sfbm7t8.bkt.clouddn.com/geiweilai.jpg"/>
+								</li>
+								<li class="redio-yxcontent">
+									<span id="">小熊喝甜粥</span>
+									<span id="">节目:98</span>
+									<span id="">和你分享关于足球的那些事</span>
+								</li>
+							</a>
+						</ul>
+						<ul class=" redio-yx-wrap">
+							<a href="">
+								<li class="redio-cover">
+									<img src="http://p9sfbm7t8.bkt.clouddn.com/chengquan.jpg"/>
+								</li>
+								<li class="redio-yxcontent">
+									<span id="">小熊喝甜粥</span>
+									<span id="">节目:98</span>
+									<span id="">和你分享关于足球的那些事</span>
+								</li>
+							</a>
+						</ul>
+					</div>
 				</div>
 			</li>
 		</ol>
 	</body>
+
 <script type="text/javascript" src="js/index.js" ></script>
+ 
+
 <script type="text/javascript">
 	var APP_ID = 'M6xv4RypSwwMGKMB5VRMx9Nc-gzGzoHsz';
 	var APP_KEY = 'jK1qp68xY7XtT0MEdzpzza3b';
@@ -169,16 +226,26 @@
   	appId: APP_ID,
   	appKey: APP_KEY
 	});
-	
-	var SongObject = AV.Object.extend('Song');
-	var songObject = new SongObject();
-//	songObject.save({
-//	name:'Planet',
-//	singer:'林宥嘉',
-//	url:'http://p9sfbm7t8.bkt.clouddn.com/cehgnquan.mp3',
-//	img:'http://p9sfbm7t8.bkt.clouddn.com/chengquan.jpg'
-//	}).then(function(object) {
-//  alert('ok');
-//	})
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+<script>
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay:true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })
+  </script>
 </html>

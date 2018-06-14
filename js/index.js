@@ -27,7 +27,35 @@ $(function(){
 			$li.attr('data-downloaded','yes')
 			})
 		}
+	
+
 	})
+ 	 			
+	
+var CoverObject = AV.Object.extend('Cover');
+var coverObject = new CoverObject();
+var query = new AV.Query('Cover');
+  query.find().then(function (results) {
+  	console.log(results)
+  	for (var i=0;i<results.length;i++) {
+  	console.log(results[i].id)
+  	let cover= results[i].attributes
+  	console.log(cover)
+  	let li=`<a href="Recsong.html">
+  			<li>
+				<img src="${cover.img}"/>
+				<p>${cover.title}</p>
+			</li>
+			</a>
+			`			
+  			$('#coverlist').append(li)
+  	}
+  }, function (error) {
+  	console.log('获取失败')
+  });
+	
+	
+	
 	
 //	let timer = undefined
 //	$('input#searchSong').on('input',function(e){
@@ -85,6 +113,6 @@ $(function(){
 //				})
 //		}	
 //	window.search=search
-//})
+})
 
 
